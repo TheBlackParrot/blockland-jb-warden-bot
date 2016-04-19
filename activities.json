@@ -263,6 +263,46 @@
 
 			"opinionated": false,
 			"collision": true
+		},
+
+		{
+			"name": "Basketball Shootout",
+
+			"prerequisites": [
+				"Please head to the basketball court and line up horizontally at half court. Freeze once you arrive."
+			],
+
+			"description": [
+				"You will take 2 basketball shots from the point that I place.",
+				"If you make it, you get to live. Otherwise, you die.",
+				"I will go down the line or nameroll who will shoot."
+			],
+
+			"opinionated": false,
+			"collision": true
+		},
+
+		{
+			"name": "Falling Platforms/Tiles",
+
+			"prerequisites": [
+				"Please head to the falling platforms area."
+			],
+
+			"opinionated": false,
+			"collision": false
+		},
+
+		{
+			"name": "Trivia",
+
+			"description": [
+				"I will ask a series of questions.",
+				"The .+PRISONER_NAME+. who gets the question correct first will win something."
+			],
+
+			"opinionated": false,
+			"collision": true
 		}
 	]
 }

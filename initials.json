@@ -5,7 +5,7 @@
 		{"spot": "bed", "isSmall": false},
 		{"spot": "toilet", "isSmall": true},
 		{"spot": "ground", "isSmall": false},
-		{"spot": "sink (if it exists, ground otherwise)", "isSmall": false}
+		{"spot": "sink (if it exists, ground otherwise)", "isSmall": true}
 	],
 
 	"actions": [

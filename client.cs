@@ -80,7 +80,7 @@ package AWCommandDetection {
 
 		switch$(getWord(%content, 0)) {
 			case "!i":
-				doInitial();
+				doInitial(getWord(%content, 1));
 				%this.setValue("");
 
 			case "!a":
