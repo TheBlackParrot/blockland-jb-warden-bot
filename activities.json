@@ -7,7 +7,7 @@
 				"You will tell me what is for dinner.",
 				"I will roll a name or go down the line, and if I like what you give me to eat, you get to live.",
 				"Head to the point that I place if you get to live.",
-				"You have 15 seconds from your name being rolled to give me an answer. If you have given me one already, ignore it."
+				"You have 15 seconds from your name being selected to give me an answer. If you have given me one already, ignore it."
 			],
 
 			"opinionated": true,
@@ -21,7 +21,7 @@
 				"You will tell me a joke.",
 				"I will roll a name or go down the line, and if I like your joke, you get to live.",
 				"Head to the point that I place if you get to live.",
-				"You have 15 seconds from your name being rolled to give me a joke, or at least start it.",
+				"You have 15 seconds from your name being selected to give me a joke, or at least start it.",
 				"If you have told me a joke already, ignore it."
 			],
 
@@ -53,7 +53,7 @@
 			"name": "Balls or No Balls",
 
 			"description": [
-				"All prisioners must stack in a corner designated by the point that I place. When the point is placed, head over to it.",
+				"All .+PRISONER_NAME_PLURAL+. must stack in a corner designated by the point that I place. When the point is placed, head over to it.",
 				"The designated shooter (myself by default) will shoot above the stack.",
 				"Whoever has the lowest amount of health after .+RNG_VALUE.min015.max030.int5+. seconds will win something.",
 				"You do not have to jump if you do not wish to. You can be killed."
@@ -67,8 +67,8 @@
 			"collision": false,
 
 			"delay": {
-				"min": 10,
-				"max": 15,
+				"min": 5,
+				"max": 10,
 				"message": "** Starting now. Guards, please keep clear of the stack. **"
 			}
 		},
@@ -115,7 +115,8 @@
 			"name": "Simon Says",
 			
 			"prerequisites": [
-				"Please line up horizontally and face me."
+				"Please line up horizontally and face me.",
+				"Freeze once you're lined up."
 			],
 
 			"description": [
@@ -137,7 +138,7 @@
 				"You will give me a fruit. Anything designated/scientifically confirmed a fruit will count.",
 				"I will roll a name or go down the line, and you must tell me a fruit. Repeated answers will get you killed.",
 				"Head to the point that I place if you get to live.",
-				"You have 10 seconds from your name being rolled to give me an answer. If you have given me one already, ignore it."
+				"You have 10 seconds from your name being selected to give me an answer. If you have given me one already, ignore it."
 			],
 
 			"koses": [
@@ -146,7 +147,122 @@
 			],
 
 			"opinionated": false,
-			"collision": false
+			"collision": true
+		},
+
+		{
+			"name": "Water Basketball",
+
+			"prerequisites": [
+				"Please head to the pool and line up at the tallest diving board. Do not get in."
+			],
+
+			"description": [
+				"The designated guard (myself by default) will stand still anywhere in the pool.",
+				"You must throw the basketball to the guard. If you miss, you die.",
+				"You may throw while jumping off the diving board, or while you're still on it.",
+				"Only go one at a time. If multiple people go, anyone going behind the first person will be designated kill-on-sight."
+			],
+
+			"koses": [
+				"Being outside the pool once you've went"
+			],
+
+			"opinionated": false,
+			"collision": true
+		},
+
+		{
+			"name": "Missile",
+
+			"prerequisites": [
+				"Please head to the pool and line up at the tallest diving board. Do not get in."
+			],
+
+			"description": [
+				"The designated guard (myself by default) will stand still anywhere in the pool.",
+				"Said guard must be within jumping distance of the tallest diving board.",
+				"You must land on the guard. If you miss, you die.",
+				"Only go one at a time. If multiple people go, anyone going behind the first person will be designated kill-on-sight."
+			],
+
+			"koses": [
+				"Being outside the pool once you've went"
+			],
+
+			"opinionated": false,
+			"collision": true
+		},
+
+		{
+			"name": "Madlibs",
+
+			"description": [
+				"I will give you a line with something missing. Fill in what is missing.",
+				"I will roll a name or go down the line, and if I like what you fill in, you get to live.",
+				"Head to the point that I place if you get to live.",
+				"You have 15 seconds from your name being selected to give me an answer. If you have given me one already, ignore it."
+			],
+
+			"opinionated": true,
+			"collision": true
+		},
+
+		{
+			"name": "Make a Wish",
+
+			"description": [
+				"Tell me what you wish for.",
+				"I will roll a name or go down the line, and if your wish is a good wish, you get to live.",
+				"Head to the point that I place if you get to live.",
+				"You have 15 seconds from your name being selected to give me an answer. If you have given me one already, ignore it."
+			],
+
+			"opinionated": true,
+			"collision": true
+		},
+
+		{
+			"name": "Collision Roulette",
+
+			"prerequisites": [
+				"Please sit and form a circle around the point that I place."
+			],
+
+			"description": [
+				"The designated guard will jump on your heads. I will turn around facing away from the circle.",
+				"If the guard goes into you when I turn collision off, you die."
+			],
+
+			"koses": [
+				"Leaving the circle",
+				"Standing up"
+			],
+
+			"opinionated": false,
+			"collision": true
+		},
+
+		{
+			"name": "Give or Take",
+
+			"prerequisites": [
+				"Please line up horizontally and face me.",
+				"Freeze once you're lined up."
+			],
+
+			"description": [
+				"I will mention an item in team chat. You will give it to another .+PRISONER_NAME+., or take it for yourself.",
+				"When your name is selected, you get mercy unless the item is death."
+				"If you get to live, head to the point that I place."
+			],
+
+			"koses": [
+				"Stacking"
+			],
+
+			"opinionated": false,
+			"collision": true
 		}
 	]
 }

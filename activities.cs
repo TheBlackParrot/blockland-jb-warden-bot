@@ -1,8 +1,14 @@
-function doActivity() {
+function doActivity(%override) {
 	$AutoWarden::CurrScheduleDelay = 0;
 	$AutoWarden::Schedules = 0;
 
 	%activity = $AutoWarden::Activities.value[getRandom(0, $AutoWarden::Activities.length-1)];
+	
+	if(%override !$= "") {
+		if(%override < $AutoWarden::Activities.length && %override >= 0) {
+			%activity = $AutoWarden::Activities.value[%override];
+		}
+	}
 	//%activity.dump();
 
 	echo("doing" SPC %activity.name);
@@ -38,7 +44,7 @@ function doActivity() {
 		echo("description exists");
 
 		for(%i=0;%i<%activity.description.length;%i++) {
-			if(%i == %activity.description.length) {
+			if(%i == %activity.description.length-1) {
 				if(%activity.keyExists["delay"]) {
 					%delay = getRandom(%activity.delay.min, %activity.delay.max) * 1000;
 				}
@@ -86,4 +92,12 @@ function cancelActivities() {
 		cancel($AutoWarden::Schedule[%i]);
 	}
 	commandToServer('messageSent', "==== CANCELLED AUTO WARDEN. PLEASE FREEZE WHERE YOU ARE. ====");
+}
+
+function listActivities() {
+	for(%i=0;%i<$AutoWarden::Activities.length;%i++) {
+		%activity = $AutoWarden::Activities.value[%i];
+
+		NewChatSO.addLine("\c2" @ %i @ ".\c6" SPC %activity.name);
+	}
 }
