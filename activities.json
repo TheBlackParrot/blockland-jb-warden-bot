@@ -1,0 +1,152 @@
+{
+	"activities": [
+		{
+			"name": "What's For Dinner?",
+
+			"description": [
+				"You will tell me what is for dinner.",
+				"I will roll a name or go down the line, and if I like what you give me to eat, you get to live.",
+				"Head to the point that I place if you get to live.",
+				"You have 15 seconds from your name being rolled to give me an answer. If you have given me one already, ignore it."
+			],
+
+			"opinionated": true,
+			"collision": true
+		},
+
+		{
+			"name": "Tell Me a Joke",
+
+			"description": [
+				"You will tell me a joke.",
+				"I will roll a name or go down the line, and if I like your joke, you get to live.",
+				"Head to the point that I place if you get to live.",
+				"You have 15 seconds from your name being rolled to give me a joke, or at least start it.",
+				"If you have told me a joke already, ignore it."
+			],
+
+			"opinionated": true,
+			"collision": true
+		},
+
+		{
+			"name": "Catch",
+
+			"description": [
+				"I will throw my Weapon Checker in the air, and someone must catch it.",
+				"Whenever you catch it, please head to the point that I place and drop the checker in front of you.",
+				"Whoever catches it will win something.",
+				"(Weapon Checkers are not illegal for the duration of this activity)."
+			],
+
+			"opinionated": false,
+			"collision": false,
+
+			"delay": {
+				"min": 3,
+				"max": 5,
+				"message": "** Throwing now. Guards, please get back. **"
+			}
+		},
+
+		{
+			"name": "Balls or No Balls",
+
+			"description": [
+				"All prisioners must stack in a corner designated by the point that I place. When the point is placed, head over to it.",
+				"The designated shooter (myself by default) will shoot above the stack.",
+				"Whoever has the lowest amount of health after .+RNG_VALUE.min015.max030.int5+. seconds will win something.",
+				"You do not have to jump if you do not wish to. You can be killed."
+			],
+
+			"koses": [
+				"Leaving the point"
+			],
+
+			"opinionated": false,
+			"collision": false,
+
+			"delay": {
+				"min": 10,
+				"max": 15,
+				"message": "** Starting now. Guards, please keep clear of the stack. **"
+			}
+		},
+
+		{
+			"name": "Sharks and Minnows",
+
+			"prerequisites": [
+				"Please head to and get in the pool."
+			],
+
+			"description": [
+				"The designated guard (myself by default) will jump into the pool when I say \"GO.\"",
+				"They will have .+RNG_VALUE.min020.max045.int5+. seconds to kill as many .+PRISONER_NAME_PLURAL+. as possible, or until 2 remain.",
+				"The designated guard may only use their baton."
+			],
+
+			"koses": [
+				"Leaving the pool"
+			],
+
+			"opinionated": false,
+			"collision": true
+		},
+
+		{
+			"name": "Russian Roulette",
+
+			"description": [
+				"I will place 6 points.",
+				"When I say to choose a point, you will have 10 seconds to choose any of the 6 points.",
+				"If a point has the same number as the number I roll, those on said point will be killed."
+			],
+
+			"koses": [
+				"Moving AFTER I roll a number"
+			],
+
+			"opinionated": false,
+			"collision": false
+		},
+
+		{
+			"name": "Simon Says",
+			
+			"prerequisites": [
+				"Please line up horizontally and face me."
+			],
+
+			"description": [
+				"The designated shooter (myself by default) will kill those not following Simon's commands."
+			],
+
+			"koses": [
+				"Stacking"
+			],
+
+			"opinionated": false,
+			"collision": true
+		},
+
+		{
+			"name": "Fruit Roulette",
+
+			"description": [
+				"You will give me a fruit. Anything designated/scientifically confirmed a fruit will count.",
+				"I will roll a name or go down the line, and you must tell me a fruit. Repeated answers will get you killed.",
+				"Head to the point that I place if you get to live.",
+				"You have 10 seconds from your name being rolled to give me an answer. If you have given me one already, ignore it."
+			],
+
+			"koses": [
+				"Moving BEFORE you are chosen",
+				"Stacking"
+			],
+
+			"opinionated": false,
+			"collision": false
+		}
+	]
+}

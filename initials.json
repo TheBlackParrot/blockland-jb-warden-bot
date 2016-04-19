@@ -1,0 +1,24 @@
+{
+	"times": ["9:40", "9:30", "9:20", "9:15"],
+
+	"spots": [
+		{"spot": "bed", "isSmall": false},
+		{"spot": "toilet", "isSmall": true},
+		{"spot": "ground", "isSmall": false},
+		{"spot": "sink (if it exists, ground otherwise)", "isSmall": false}
+	],
+
+	"actions": [
+		{"action": "freeze", "usesSpot": true},
+		{"action": "AFK freeze", "usesSpot": true},
+		{"action": "free roam your cells", "usesSpot": false},
+		{"action": "crouch", "usesSpot": true},
+		{"action": "jump", "usesSpot": true},
+		{"action": "spin around", "usesSpot": false},
+		{"action": "sit", "usesSpot": true}
+	],
+
+	"facing": ["back of your cell", "front of your cell", "the armory"],
+
+	"touching": ["cell doors", "back wall"]
+}
